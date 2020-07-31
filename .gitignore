@@ -130,3 +130,7 @@ dmypy.json
 
 # data 
 fremont_bicycle.csv
+
+# end with ds_store 
+*.DS_Store
+
