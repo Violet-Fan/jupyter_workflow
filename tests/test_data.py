@@ -1,5 +1,6 @@
 from jupyter.data import get_fremont_bicycle_data
 import pandas as pd 
+import numpy as np 
 ##mm error 
 ## data = get_fremont_bicycle_data()
 def test_fremont_data():
@@ -8,3 +9,4 @@ def test_fremont_data():
     data = get_fremont_bicycle_data(FILENAME, URL)
     assert all(data.columns == ['Total', 'East', 'West'])
     assert isinstance(data.index, pd.DatetimeIndex)
+    assert len(np.unique(data.index.time)) == 24 
